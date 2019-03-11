@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# -s 非用户交互模式
+parted -s /dev/sdb mktable msdos
+parted -s /dev/sdb mkpart primary fat32 1 50
+parted -s /dev/sdb mkpart primary ext4 51 16021
+
+sleep 3
+
+mkfs.fat /dev/sdb1
+mkfs.ext4 /dev/sdb2
+
