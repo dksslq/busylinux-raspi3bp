@@ -1,3 +1,5 @@
 #!/bin/sh
 mount -a	# mount /etc/fstab
+mkdir /dev/pts
+mount -t devpts devpts /dev/pts
 
