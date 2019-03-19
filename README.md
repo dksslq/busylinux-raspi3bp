@@ -1,4 +1,4 @@
-## Raspberrypi3b plus 精悍的操作系统 (linux-5.0)
+## Raspberry Pi 3B Plus 精悍的操作系统 (linux-5.0)
 
 * #### Usage:
 * 释放boot目录中的内容到SD卡的 boot 分区
