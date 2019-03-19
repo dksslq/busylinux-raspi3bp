@@ -1,0 +1,180 @@
+kernel/arch/arm64/crypto/sha512-ce.ko: kernel/arch/arm64/crypto/sha512-arm64.ko
+kernel/arch/arm64/crypto/sha3-ce.ko: kernel/crypto/sha3_generic.ko
+kernel/arch/arm64/crypto/sm3-ce.ko: kernel/crypto/sm3_generic.ko
+kernel/arch/arm64/crypto/crct10dif-ce.ko:
+kernel/arch/arm64/crypto/aes-neon-blk.ko:
+kernel/arch/arm64/crypto/sha512-arm64.ko:
+kernel/arch/arm64/crypto/chacha-neon.ko: kernel/crypto/chacha_generic.ko
+kernel/arch/arm64/crypto/aes-neon-bs.ko: kernel/arch/arm64/crypto/aes-neon-blk.ko
+kernel/fs/nfs/flexfilelayout/nfs_layout_flexfiles.ko:
+kernel/fs/fuse/fuse.ko:
+kernel/fs/fuse/cuse.ko: kernel/fs/fuse/fuse.ko
+kernel/fs/overlayfs/overlay.ko:
+kernel/fs/btrfs/btrfs.ko: kernel/crypto/xor.ko kernel/arch/arm64/lib/xor-neon.ko kernel/lib/zstd/zstd_decompress.ko kernel/lib/zstd/zstd_compress.ko kernel/lib/lzo/lzo_compress.ko kernel/lib/raid6/raid6_pq.ko
+kernel/crypto/crypto_engine.ko:
+kernel/crypto/seqiv.ko:
+kernel/crypto/crypto_user.ko:
+kernel/crypto/cmac.ko:
+kernel/crypto/md5.ko:
+kernel/crypto/sha512_generic.ko:
+kernel/crypto/sha3_generic.ko:
+kernel/crypto/sm3_generic.ko:
+kernel/crypto/ecb.ko:
+kernel/crypto/ctr.ko:
+kernel/crypto/gcm.ko:
+kernel/crypto/ccm.ko:
+kernel/crypto/des_generic.ko:
+kernel/crypto/arc4.ko:
+kernel/crypto/chacha_generic.ko:
+kernel/crypto/authenc.ko:
+kernel/crypto/authencesn.ko: kernel/crypto/authenc.ko
+kernel/crypto/ghash-generic.ko:
+kernel/crypto/ecdh_generic.ko:
+kernel/crypto/xor.ko: kernel/arch/arm64/lib/xor-neon.ko
+kernel/drivers/pwm/pwm-bcm2835.ko:
+kernel/drivers/pwm/pwm-cros-ec.ko:
+kernel/drivers/video/backlight/lcd.ko:
+kernel/drivers/video/backlight/generic_bl.ko:
+kernel/drivers/video/backlight/lp855x_bl.ko:
+kernel/drivers/video/backlight/pwm_bl.ko:
+kernel/drivers/char/ipmi/ipmi_msghandler.ko:
+kernel/drivers/char/ipmi/ipmi_devintf.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/char/ipmi/ipmi_si.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/dma/virt-dma.ko:
+kernel/drivers/dma/bcm-sba-raid.ko: kernel/lib/raid6/raid6_pq.ko
+kernel/drivers/dma/bcm2835-dma.ko: kernel/drivers/dma/virt-dma.ko
+kernel/drivers/regulator/vctrl-regulator.ko:
+kernel/drivers/char/hw_random/rng-core.ko:
+kernel/drivers/char/hw_random/bcm2835-rng.ko: kernel/drivers/char/hw_random/rng-core.ko
+kernel/drivers/char/hw_random/cavium-rng.ko:
+kernel/drivers/char/hw_random/cavium-rng-vf.ko: kernel/drivers/char/hw_random/rng-core.ko
+kernel/drivers/gpu/drm/i2c/ch7006.ko: kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/i2c/sil164.ko: kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/panel/panel-simple.ko: kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/bridge/adv7511/adv7511.ko: kernel/drivers/media/cec/cec.ko kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/hisilicon/hibmc/hibmc-drm.ko: kernel/drivers/gpu/drm/ttm/ttm.ko kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/hisilicon/kirin/kirin-drm.ko: kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.ko: kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/drm_kms_helper.ko: kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/drm.ko: kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko:
+kernel/drivers/gpu/drm/ttm/ttm.ko: kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/vc4/vc4.ko: kernel/drivers/media/cec/cec.ko kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/gpu/drm/nouveau/nouveau.ko: kernel/drivers/i2c/algos/i2c-algo-bit.ko kernel/drivers/gpu/drm/ttm/ttm.ko kernel/drivers/gpu/drm/drm_kms_helper.ko kernel/drivers/gpu/drm/drm.ko kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
+kernel/drivers/block/nbd.ko:
+kernel/drivers/misc/eeprom/at25.ko:
+kernel/drivers/mfd/cros_ec_dev.ko: kernel/drivers/platform/chrome/cros_ec_ctl.ko
+kernel/drivers/scsi/ufs/ufshcd-core.ko:
+kernel/drivers/scsi/ufs/ufshcd-pltfrm.ko: kernel/drivers/scsi/ufs/ufshcd-core.ko
+kernel/drivers/nvme/host/nvme-core.ko:
+kernel/drivers/nvme/host/nvme.ko: kernel/drivers/nvme/host/nvme-core.ko
+kernel/drivers/spi/spidev.ko:
+kernel/drivers/spi/spi-bcm2835.ko:
+kernel/drivers/spi/spi-bcm2835aux.ko:
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko:
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko: kernel/net/wireless/cfg80211.ko kernel/net/rfkill/rfkill.ko kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko
+kernel/drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu.ko: kernel/net/mac80211/mac80211.ko kernel/net/wireless/cfg80211.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/net/usb/asix.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/ax88179_178a.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/cdc_ether.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/dm9601.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/sr9800.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/smsc75xx.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/smsc95xx.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/net1080.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/plusb.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/cdc_subset.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/mcs7830.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/usbnet.ko:
+kernel/drivers/net/usb/cdc_ncm.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/can/can-dev.ko:
+kernel/drivers/usb/roles/roles.ko:
+kernel/drivers/input/keyboard/adc-keys.ko: kernel/drivers/input/input-polldev.ko
+kernel/drivers/input/touchscreen/atmel_mxt_ts.ko:
+kernel/drivers/input/input-polldev.ko:
+kernel/drivers/rtc/rtc-rk808.ko:
+kernel/drivers/i2c/algos/i2c-algo-bit.ko:
+kernel/drivers/i2c/busses/i2c-bcm2835.ko:
+kernel/drivers/media/cec/cec.ko:
+kernel/drivers/power/supply/sbs-battery.ko:
+kernel/drivers/crypto/virtio/virtio_crypto.ko: kernel/crypto/crypto_engine.ko
+kernel/drivers/hid/i2c-hid/i2c-hid.ko:
+kernel/drivers/platform/chrome/cros_ec_ctl.ko:
+kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko: kernel/drivers/iio/buffer/kfifo_buf.ko
+kernel/drivers/iio/buffer/kfifo_buf.ko:
+kernel/drivers/iio/common/cros_ec_sensors/cros_ec_sensors_core.ko:
+kernel/drivers/iio/common/cros_ec_sensors/cros_ec_sensors.ko: kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko kernel/drivers/iio/buffer/kfifo_buf.ko kernel/drivers/iio/common/cros_ec_sensors/cros_ec_sensors_core.ko
+kernel/drivers/iio/light/cros_ec_light_prox.ko: kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko kernel/drivers/iio/buffer/kfifo_buf.ko kernel/drivers/iio/common/cros_ec_sensors/cros_ec_sensors_core.ko
+kernel/drivers/iio/pressure/cros_ec_baro.ko: kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko kernel/drivers/iio/buffer/kfifo_buf.ko kernel/drivers/iio/common/cros_ec_sensors/cros_ec_sensors_core.ko
+kernel/drivers/bluetooth/hci_uart.ko: kernel/drivers/bluetooth/btbcm.ko kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/bluetooth/btusb.ko: kernel/drivers/bluetooth/btrtl.ko kernel/drivers/bluetooth/btintel.ko kernel/drivers/bluetooth/btbcm.ko kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/bluetooth/btintel.ko: kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/bluetooth/btbcm.ko: kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/bluetooth/btrtl.ko: kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/drivers/remoteproc/remoteproc.ko:
+kernel/sound/soc/codecs/snd-soc-ak4613.ko:
+kernel/sound/soc/codecs/snd-soc-dmic.ko:
+kernel/sound/soc/codecs/snd-soc-es7134.ko:
+kernel/sound/soc/codecs/snd-soc-es7241.ko:
+kernel/sound/soc/codecs/snd-soc-spdif-rx.ko:
+kernel/sound/soc/codecs/snd-soc-spdif-tx.ko:
+kernel/sound/soc/codecs/snd-soc-tas571x.ko:
+kernel/sound/soc/generic/snd-soc-simple-card-utils.ko:
+kernel/sound/soc/generic/snd-soc-simple-card.ko: kernel/sound/soc/generic/snd-soc-simple-card-utils.ko
+kernel/sound/soc/generic/snd-soc-audio-graph-card.ko: kernel/sound/soc/generic/snd-soc-simple-card-utils.ko
+kernel/sound/soc/bcm/snd-soc-bcm2835-i2s.ko:
+kernel/net/netfilter/nf_conntrack.ko: kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+kernel/net/netfilter/nf_log_common.ko:
+kernel/net/netfilter/nf_nat.ko: kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+kernel/net/netfilter/x_tables.ko:
+kernel/net/netfilter/xt_tcpudp.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_nat.ko: kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_CHECKSUM.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_LOG.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_addrtype.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/netfilter/xt_conntrack.ko: kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/nf_nat_ipv4.ko: kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko:
+kernel/net/ipv4/netfilter/nf_log_ipv4.ko: kernel/net/netfilter/nf_log_common.ko
+kernel/net/ipv4/netfilter/nf_reject_ipv4.ko:
+kernel/net/ipv4/netfilter/ip_tables.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/iptable_filter.ko: kernel/net/ipv4/netfilter/ip_tables.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/iptable_mangle.ko: kernel/net/ipv4/netfilter/ip_tables.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/iptable_nat.ko: kernel/net/ipv4/netfilter/nf_nat_ipv4.ko kernel/net/ipv4/netfilter/ip_tables.ko kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/ipt_MASQUERADE.ko: kernel/net/ipv4/netfilter/nf_nat_ipv4.ko kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/netfilter/ipt_REJECT.ko: kernel/net/ipv4/netfilter/nf_reject_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv4/ip_tunnel.ko:
+kernel/net/ipv4/tunnel4.ko:
+kernel/net/ipv6/netfilter/ip6_tables.ko: kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/netfilter/ip6table_filter.ko: kernel/net/ipv6/netfilter/ip6_tables.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/netfilter/ip6table_mangle.ko: kernel/net/ipv6/netfilter/ip6_tables.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/netfilter/ip6table_nat.ko: kernel/net/ipv6/netfilter/nf_nat_ipv6.ko kernel/net/ipv6/netfilter/ip6_tables.ko kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/netfilter/nf_nat_ipv6.ko: kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko:
+kernel/net/ipv6/netfilter/nf_log_ipv6.ko: kernel/net/netfilter/nf_log_common.ko
+kernel/net/ipv6/netfilter/nf_reject_ipv6.ko:
+kernel/net/ipv6/netfilter/ip6t_MASQUERADE.ko: kernel/net/ipv6/netfilter/nf_nat_ipv6.ko kernel/net/netfilter/nf_nat.ko kernel/net/netfilter/nf_conntrack.ko kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/netfilter/ip6t_REJECT.ko: kernel/net/ipv6/netfilter/nf_reject_ipv6.ko kernel/net/netfilter/x_tables.ko
+kernel/net/ipv6/xfrm6_mode_transport.ko:
+kernel/net/ipv6/xfrm6_mode_tunnel.ko:
+kernel/net/ipv6/xfrm6_mode_beet.ko:
+kernel/net/ipv6/sit.ko: kernel/net/ipv4/tunnel4.ko kernel/net/ipv4/ip_tunnel.ko
+kernel/net/bridge/br_netfilter.ko:
+kernel/net/wireless/cfg80211.ko: kernel/net/rfkill/rfkill.ko
+kernel/net/can/can.ko:
+kernel/net/can/can-raw.ko: kernel/net/can/can.ko
+kernel/net/can/can-bcm.ko: kernel/net/can/can.ko
+kernel/net/can/can-gw.ko: kernel/net/can/can.ko
+kernel/net/bluetooth/bluetooth.ko: kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/net/bluetooth/bnep/bnep.ko: kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/net/bluetooth/hidp/hidp.ko: kernel/net/bluetooth/bluetooth.ko kernel/crypto/ecdh_generic.ko kernel/net/rfkill/rfkill.ko
+kernel/net/mac80211/mac80211.ko: kernel/net/wireless/cfg80211.ko kernel/net/rfkill/rfkill.ko
+kernel/net/rfkill/rfkill.ko:
+kernel/net/rfkill/rfkill-gpio.ko: kernel/net/rfkill/rfkill.ko
+kernel/net/wimax/wimax.ko: kernel/net/rfkill/rfkill.ko
+kernel/net/nfc/nfc.ko: kernel/net/rfkill/rfkill.ko
+kernel/arch/arm64/lib/xor-neon.ko:
+kernel/lib/lzo/lzo_compress.ko:
+kernel/lib/zstd/zstd_compress.ko:
+kernel/lib/zstd/zstd_decompress.ko:
+kernel/lib/raid6/raid6_pq.ko:
