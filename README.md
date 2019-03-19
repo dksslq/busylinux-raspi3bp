@@ -1,7 +1,7 @@
 ## Raspberrypi3b plus 精悍的操作系统 (linux-5.0)
 
 * #### Usage:
-* 释放boot目录的内容到SD卡的 boot 分区
+* 释放boot目录中的内容到SD卡的 boot 分区
 * 释放root-basic目录中的内容到SD卡的 root 分区
 * 你可以选择性地释放software中的软件到 root 分区
 *
