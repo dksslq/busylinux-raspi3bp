@@ -1,0 +1,9 @@
+#######################################
+#                                     #
+#    term:runlevels:action:command    #
+#                                     #
+#######################################
+
+console::sysinit:-/etc/init.d/rcS
+console::respawn:/sbin/getty -L ttyS1 115200 vt102
+

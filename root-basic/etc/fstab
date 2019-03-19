@@ -3,5 +3,7 @@
 #	/etc/fstab    create by dksslq 3.12.2019
 #
 #
+tmpfs	/tmp	tmpfs	defaults	0 0
 sysfs	/sys	sysfs	defaults	0 0
 proc	/proc	proc	defaults	0 0
+
