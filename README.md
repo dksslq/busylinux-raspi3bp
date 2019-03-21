@@ -4,7 +4,7 @@
 * --释放boot目录中的内容到SD卡的 boot 分区
 * --释放root-basic.cpio中的内容到SD卡的 root 分区
 * --释放software目录中的软件(可选)到 root 分区(注意 basic中的依赖包)
-* ##### --启动
+* ##### >>启动<<
 
 * root密码:1234
 
