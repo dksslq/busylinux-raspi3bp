@@ -1,5 +1,5 @@
 # set cmdline for kernel
-env set bootargs "dwc_otg.lpm_enable=0 console=ttyS1,115200 noinitrd root=/dev/mmcblk0p2 rw rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait init=/sbin/init"
+env set bootargs "console=ttyS1,115200 noinitrd root=/dev/mmcblk0p2 rw rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait init=/sbin/init"
 
 MMC_DEV_PART="mmc 0:1"
 KERNEL_FILE="/linux/Image"
