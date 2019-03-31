@@ -1,6 +1,7 @@
 # set cmdline for kernel
 env set bootargs "console=ttyS1,115200 noinitrd root=/dev/mmcblk0p2 rw rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait init=/sbin/init"
 
+# interface=mmc device=0 part=1
 MMC_DEV_PART="mmc 0:1"
 KERNEL_FILE="/linux/Image"
 FDT_FILE="/linux/bcm2837-rpi-3-b-plus.dtb"
