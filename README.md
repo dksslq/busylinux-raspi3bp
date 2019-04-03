@@ -1,15 +1,15 @@
 ## Raspberry Pi 3B Plus BusyLinux (linux-5.0)
 
 * #### 使用方法:
-~~* --释放boot目录中的内容 到 SD卡 boot 分区~~
-~~* --释放root-basic.cpio中的内容 到 SD卡 root 分区~~
-~~* --释放software/basic/lib目录中的库 到 SD卡 root 分区~~
-~~* --释放software/basic/init.d包 到 SD卡 root 分区~~
-~~* --释放software/basic/ncurses-term包 到 SD卡 root 分区~~
-~~* --释放software/basic/user包 到 SD卡 root 分区~~
-~~* --释放software目录中的busybox软件 到 SD卡 root 分区~~
+* ~~--释放boot目录中的内容 到 SD卡 boot 分区~~
+* ~~--释放root-basic.cpio中的内容 到 SD卡 root 分区~~
+* ~~--释放software/basic/lib目录中的库 到 SD卡 root 分区~~
+* ~~--释放software/basic/init.d包 到 SD卡 root 分区~~
+* ~~--释放software/basic/ncurses-term包 到 SD卡 root 分区~~
+* ~~--释放software/basic/user包 到 SD卡 root 分区~~
+* ~~--释放software目录中的busybox软件 到 SD卡 root 分区~~
 
-~~* --释放software目录中的软件 到 root 分区(注意basic中的依赖库)~~
+* ~~--释放software目录中的软件 到 root 分区(注意basic中的依赖库)~~
 
 * --直接使用setup.sh安装
 
