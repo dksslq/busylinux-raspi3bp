@@ -1,12 +1,15 @@
-# Enable audio (loads snd_bcm2835)
-#dtparam=audio=on
-
 # 应用设备树重载
 #dtoverlay=
 #dtoverlay=pi3-miniuart-bt
 
 # 开启uart串口
 enable_uart=1
+
+# start_x Enable the camera module. 
+start_x=1
+
+# 显存128MiB
+gpu_mem=128
 
 # 用户空间代码(第三引导程序) 文件名必须为kernel*.img 这里的kernel8.img文件是uboot
 kernel=kernel8.img
