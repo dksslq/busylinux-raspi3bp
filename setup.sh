@@ -20,8 +20,9 @@ printf "输入SD卡root分区挂载点: ";read ROOTDIR
 
 set -e
 
-rm -rf "$BOOTDIR/*"
-rm -rf "$ROOTDIR/*"
+# clean old files
+find "$BOOTDIR" -maxdepth 1 -! -path "$BOOTDIR" -exec rm -rf {} \;
+find "$ROOTDIR" -maxdepth 1 -! -path "$ROOTDIR" -exec rm -rf {} \;
 sync
 
 cp -rfa $BOOT $BOOTDIR
