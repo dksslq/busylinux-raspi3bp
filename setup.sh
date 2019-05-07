@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "警告!进行安装操作将会清除目标安装目录中的旧文件!"
+echo "警告! 进行安装操作将会清除目标安装目录中的旧文件!"
 echo
 
 BOOT="$PWD/boot/*"
@@ -14,31 +14,35 @@ NCURTERM="$PWD/software/basic/ncurses-term-6.1.tar.xz"
 
 SOFT="$PWD/software"
 
-#stat $LIBS $SOFT $INITD $USER $NCURTERM
-printf "输入SD卡boot分区挂载点: ";read BOOTDIR
-printf "输入SD卡root分区挂载点: ";read ROOTDIR
+while [ -z "$SD_BOOTDIR" -o ! -d "$SD_BOOTDIR" ];do
+	printf "输入SD卡boot分区挂载点: ";read SD_BOOTDIR
+done
+
+while [ -z "$SD_ROOTDIR" -o ! -d "$SD_ROOTDIR" ];do
+	printf "输入SD卡root分区挂载点: ";read SD_ROOTDIR
+done
 
 set -e
 
 # clean old files
-find "$BOOTDIR" -maxdepth 1 -! -path "$BOOTDIR" -exec rm -rf {} \;
-find "$ROOTDIR" -maxdepth 1 -! -path "$ROOTDIR" -exec rm -rf {} \;
+find "$SD_BOOTDIR" -maxdepth 1 -! -path "$SD_BOOTDIR" -exec rm -rf {} \;
+find "$SD_ROOTDIR" -maxdepth 1 -! -path "$SD_ROOTDIR" -exec rm -rf {} \;
 sync
 
-cp -rfa $BOOT $BOOTDIR
+cp -rfa $BOOT $SD_BOOTDIR
 
 #search and install *.tar.xz from $1 depth 1
 dist_install_xzs(){
-	find $1 -maxdepth 1 -type f -name "*.tar.xz" -exec tar xJvf {} -C $ROOTDIR \;
+	find $1 -maxdepth 1 -type f -name "*.tar.xz" -exec tar xJvf {} -C $SD_ROOTDIR \;
 	wait
 }
 dist_install_xz(){
-	tar xJvf $1 -C $ROOTDIR
+	tar xJvf $1 -C $SD_ROOTDIR
 	wait
 }
 
 
-cd $ROOTDIR
+cd "$SD_ROOTDIR"
 cpio -i < $ROOTBASIC
 cd -
 
