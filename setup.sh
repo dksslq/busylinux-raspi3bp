@@ -7,10 +7,9 @@ BOOT="$PWD/boot/*"
 
 ROOTBASIC="$PWD/root-basic.cpio"
 LIBS="$PWD/software/basic/lib"
+ETCS="$PWD/software/basic/etc"
 
 INITD="$PWD/software/basic/init.d.tar.xz"
-USER="$PWD/software/basic/user.tar.xz"
-NCURTERM="$PWD/software/basic/ncurses-term-6.1.tar.xz"
 
 SOFT="$PWD/software"
 
@@ -47,10 +46,9 @@ cpio -i < $ROOTBASIC
 cd -
 
 dist_install_xzs $LIBS
+dist_install_xzs $ETCS
 
 dist_install_xz $INITD
-dist_install_xz $USER
-dist_install_xz $NCURTERM
 
 dist_install_xzs $SOFT
 
