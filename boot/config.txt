@@ -7,11 +7,11 @@
 # 开启调试uart
 enable_uart=1
 
-# Enable the camera module. 
+# Enable the camera module.
 start_x=1
 
 # 显存/MiB
 gpu_mem=128
 
-# 第三引导程序 文件名必须为kernel[N].img 这里的kernel8.img文件是uboot
+# 第三引导程序 文件名必须为kernel[N].img 这里的kernel8.img文件是uboot-201904
 kernel=kernel8.img
