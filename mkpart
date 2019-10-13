@@ -7,13 +7,13 @@
 #
 set -e
 
-# -s 非用户交互模式
-parted -s /dev/sdb mktable msdos
-parted -s /dev/sdb mkpart primary fat32 1 50
-parted -s /dev/sdb mkpart primary ext4 51 16021
+parted -s ${DISK} mktable msdos
+parted -s ${DISK} mkpart primary fat32 1 50
+parted -s ${DISK} mkpart primary ext4 51 100%
+sync
 
 sleep 3
 
-mkfs.fat /dev/sdb1
-mkfs.ext4 /dev/sdb2
+mkfs.fat /dev/${DISK}1
+mkfs.ext4 /dev/${DISK}2
 
