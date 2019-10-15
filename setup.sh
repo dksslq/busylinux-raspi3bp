@@ -28,11 +28,12 @@ find "$SD_ROOTDIR" -maxdepth 1 -! -path "$SD_ROOTDIR" -exec rm -rf {} \;
 sync
 
 cp -rfa "$BOOT/." $SD_BOOTDIR
-#find "$BOOT" -maxdepth 1 -! -path "$BOOT" -exec cp -rfa {} "$SD_BOOTDIR" \;
 
 #search and install *.tar.xz from $1 depth 1
 dist_install_xzs(){
-	find $1 -maxdepth 1 -type f -name "*.tar.xz" -exec tar -k -xJvf {} -C $SD_ROOTDIR \;
+	for package in `find $1 -maxdepth 1 -type f -name "*.tar.xz"`; do
+		dist_install_xz $package
+	done
 	wait
 }
 dist_install_xz(){
