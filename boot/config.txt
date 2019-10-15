@@ -1,8 +1,11 @@
 # 应用设备树重载
 #dtoverlay=
 # 在默认情况下 蓝牙使用的是全速的uart,而调试用的是miniuart
-# 删除此行注释来进行交换
+# 删除此行注释符来切换
 #dtoverlay=pi3-miniuart-bt
+
+# 应用设备树参数
+#dtparam=
 
 # 开启调试uart
 enable_uart=1
