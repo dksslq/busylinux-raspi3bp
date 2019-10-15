@@ -15,16 +15,16 @@ INITD="$PWD/software/basic/init.d.tar.xz"
 SOFT="$PWD/software"
 
 while [ -z "$SD_BOOTDIR" -o ! -d "$SD_BOOTDIR" ];do
-	printf "输入SD卡boot分区挂载点: ";read SD_BOOTDIR
+	printf "SD卡boot分区挂载点: ";read SD_BOOTDIR
 done
 
 while [ -z "$SD_ROOTDIR" -o ! -d "$SD_ROOTDIR" ];do
-	printf "输入SD卡root分区挂载点: ";read SD_ROOTDIR
+	printf "SD卡root分区挂载点: ";read SD_ROOTDIR
 done
 
 # clean old files
-find "$SD_BOOTDIR" -maxdepth 1 -! -path "$SD_BOOTDIR" -exec rm -rf {} \;
-find "$SD_ROOTDIR" -maxdepth 1 -! -path "$SD_ROOTDIR" -exec rm -rf {} \;
+find "$SD_BOOTDIR" -maxdepth 1 ! -path "$SD_BOOTDIR" -exec rm -rf {} \;
+find "$SD_ROOTDIR" -maxdepth 1 ! -path "$SD_ROOTDIR" -exec rm -rf {} \;
 sync
 
 cp -rfa "$BOOT/." $SD_BOOTDIR
