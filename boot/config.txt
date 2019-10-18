@@ -10,7 +10,7 @@
 # 开启调试uart
 enable_uart=1
 
-# Enable the camera module.
+# 摄像头模块
 start_x=1
 
 # 显存/MiB
