@@ -1,0 +1,25 @@
+arm_64bit=1
+
+# 第三引导部(内核) kernel[7/7l/8].img
+kernel=kernel8.img
+device_tree=bcm2710-rpi-3-b-plus.dtb
+
+# 设备树重载(使用overlays中的设备树)
+#dtoverlay=
+# 设备树参数
+#dtparam=
+
+# 启用音频
+dtparam=audio=on
+
+# 将0替换为1并且在cmdline.txt中加入"console=ttyS0,115200"以启用uart调试端口
+# 取消注释/etc/inittab中"getty"所在的行,以允许在uart调试串口上登录shell
+enable_uart=0
+
+# Videocore GPU固件
+# start_file --> start_x.elf
+# fixup_file --> fixup_x.dat
+start_x=1
+
+# 显存/MiB
+gpu_mem=128

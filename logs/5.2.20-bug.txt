@@ -1,0 +1,84 @@
+[ 1192.698229] bcm2835-v4l2: unregistering video0
+[ 1213.982655] bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+[ 1214.006923] bcm2835-v4l2: scene mode selected 0, was 0
+[ 1214.007237] bcm2835-v4l2: V4L2 device registered as video0 - stills mode > 1280x720
+[ 1214.020556] bcm2835-v4l2: Broadcom 2835 MMAL video capture ver 0.0.2 loaded.
+[ 4611.808597] bcm2835_v4l2: timed out waiting for sync completion
+[ 4614.816603] bcm2835_v4l2: timed out waiting for sync completion
+[ 4615.840586] bcm2835-v4l2: stop_streaming: Timeout waiting for buffers to be returned - 32 outstanding
+[ 4618.912578] bcm2835_v4l2: timed out waiting for sync completion
+[ 4618.918612] bcm2835-v4l2: Failed disabling camera, ret -62
+[ 4618.924189] bcm2835-v4l2: Failed to disable camera
+[ 4618.929056] ------------[ cut here ]------------
+[ 4618.933844] WARNING: CPU: 2 PID: 384 at /compile/linux-5.2.20-xddd/drivers/media/common/videobuf2/videobuf2-core.c:1881 __vb2_queue_cancel+0x22c/0x2a0 [videobuf2_common]
+[ 4618.949188] Modules linked in: bcm2835_v4l2(C) iptable_nat xt_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 ip_tables x_tables v4l2_common vchiq(C) videobuf2_vmalloc videobuf2_memops videobuf2_v4l2 videodev videobuf2_common brcmfmac cfg80211 rfkill brcmutil [last unloaded: bcm2835_v4l2]
+[ 4618.975688] CPU: 2 PID: 384 Comm: ffmpeg Tainted: G        WC        5.2.20-xddd #2
+[ 4618.983451] Hardware name: Raspberry Pi 3 Model B Plus Rev 1.3 (DT)
+[ 4618.989809] pstate: 60000005 (nZCv daif -PAN -UAO)
+[ 4618.994677] pc : __vb2_queue_cancel+0x22c/0x2a0 [videobuf2_common]
+[ 4619.000955] lr : __vb2_queue_cancel+0x22c/0x2a0 [videobuf2_common]
+[ 4619.007220] sp : ffff000010e4bac0
+[ 4619.010576] x29: ffff000010e4bac0 x28: 0000000000000001 
+[ 4619.015963] x27: ffff80002ea37078 x26: ffff80002ea37690 
+[ 4619.021351] x25: ffff000008930238 x24: ffff80002ea373e0 
+[ 4619.026740] x23: ffff80002ebc3700 x22: ffff000008819000 
+[ 4619.032127] x21: 0000000040045613 x20: ffff80002ebc3700 
+[ 4619.037515] x19: ffff80002ea37690 x18: ffff000010a28648 
+[ 4619.042902] x17: 0000000000000000 x16: 0000000000000000 
+[ 4619.048289] x15: ffff000090e4b827 x14: 0000000000000006 
+[ 4619.053676] x13: ffff000010e4b835 x12: ffff000010a39aa8 
+[ 4619.059063] x11: 0000000000000000 x10: 0000000005f5e0ff 
+[ 4619.064450] x9 : ffff000010e4b7c0 x8 : 0000000000000103 
+[ 4619.069837] x7 : ffff00001045cd78 x6 : ffff000010a929fb 
+[ 4619.075225] x5 : ffff000010a0d018 x4 : 0000000000000000 
+[ 4619.080611] x3 : 0000000000000000 x2 : c480e324226c8400 
+[ 4619.085998] x1 : 0000000000000000 x0 : 0000000000000024 
+[ 4619.091386] Call trace:
+[ 4619.093874]  __vb2_queue_cancel+0x22c/0x2a0 [videobuf2_common]
+[ 4619.099799]  vb2_core_streamoff+0x48/0xb8 [videobuf2_common]
+[ 4619.105552]  vb2_streamoff+0x3c/0x60 [videobuf2_v4l2]
+[ 4619.110684]  vb2_ioctl_streamoff+0x48/0x1038 [videobuf2_v4l2]
+[ 4619.116562]  v4l_streamoff+0x20/0x28 [videodev]
+[ 4619.121197]  __video_do_ioctl+0x1ec/0x3b0 [videodev]
+[ 4619.126272]  video_usercopy+0x210/0x4c0 [videodev]
+[ 4619.131170]  video_ioctl2+0x14/0x20 [videodev]
+[ 4619.135716]  v4l2_ioctl+0x44/0x68 [videodev]
+[ 4619.140053]  do_vfs_ioctl+0xb8/0x8a0
+[ 4619.143677]  ksys_ioctl+0x44/0x78
+[ 4619.147036]  __arm64_sys_ioctl+0x18/0x28
+[ 4619.151018]  el0_svc_common.constprop.0+0xb0/0x168
+[ 4619.155877]  el0_svc_handler+0x20/0x78
+[ 4619.159679]  el0_svc+0x8/0xc
+[ 4619.162596] ---[ end trace 1b985f17f7faf57c ]---
+[ 4619.167298] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000e82590e5 in active state
+[ 4619.177818] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000004f939aef in active state
+[ 4619.188329] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000921e6d23 in active state
+[ 4619.198839] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000009662dc54 in active state
+[ 4619.209349] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000027c3e55f in active state
+[ 4619.219858] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000002a4ce43f in active state
+[ 4619.230367] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000005c968214 in active state
+[ 4619.240875] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000006015f3a5 in active state
+[ 4619.251384] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000e5ee673a in active state
+[ 4619.261894] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000c0a374df in active state
+[ 4619.272404] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000081c0eaa7 in active state
+[ 4619.282913] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000a8d17abf in active state
+[ 4619.293422] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000056c36f4c in active state
+[ 4619.303932] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000ebc26f46 in active state
+[ 4619.314442] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000022bad975 in active state
+[ 4619.324951] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000009d840b78 in active state
+[ 4619.335460] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000031b611e4 in active state
+[ 4619.345969] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000002517eaf in active state
+[ 4619.356478] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000afab38ce in active state
+[ 4619.366987] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000000187c616 in active state
+[ 4619.377497] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000837e3b78 in active state
+[ 4619.388007] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000b5bb6758 in active state
+[ 4619.398515] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000b4aeb2cb in active state
+[ 4619.409023] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000010321bab in active state
+[ 4619.419532] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000b4238ac6 in active state
+[ 4619.430040] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000004775d1ef in active state
+[ 4619.440564] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000a8dd26fb in active state
+[ 4619.451074] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000003d681ef5 in active state
+[ 4619.461583] videobuf2_common: driver bug: stop_streaming operation is leaving buf 000000008211c77b in active state
+[ 4619.472092] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000f3e094db in active state
+[ 4619.482602] videobuf2_common: driver bug: stop_streaming operation is leaving buf 00000000454d7dc8 in active state
+[ 4619.493111] videobuf2_common: driver bug: stop_streaming operation is leaving buf 0000000027819513 in active state

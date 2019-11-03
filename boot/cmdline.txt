@@ -1,0 +1,1 @@
+noinitrd root=/dev/mmcblk0p2 rw rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait init=/sbin/init
